@@ -1,0 +1,37 @@
+<project>
+	<!-- Default metadata -->
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ceri</groupId>
+    <artifactId>techniquesTest</artifactId>
+    <name>Techniques de Test </name>
+    <url>https://github.com/axelclerici/ceri-m1-test-2017</url>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Author information -->
+    <developers>
+        <developer>
+            <id>axelclerici</id>
+            <name>Axel Clerici</name>
+            <email>axel.clerici@gmail.com</email>
+        </developer>
+	</developers>
+
+	<!-- BaseSet Build -->
+	<build>
+  		<defaultGoal>install</defaultGoal>
+  		<directory>${basedir}/target</directory>
+  		<finalName>${artifactId}-${version}</finalName>
+  		<filters>
+  		</filters>
+	</build>
+
+	<!-- jUnit dependency -->
+	<dependencies>
+		<dependency>
+    		<groupId>junit</groupId>
+    		<artifactId>junit</artifactId>
+    		<version>4.12</version> <!-- Or whatever JUnit you're using. -->
+		</dependency>
+	</dependencies>
+</project>
+
