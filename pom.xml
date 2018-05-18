@@ -16,45 +16,68 @@
         </developer>
 	</developers>
 
-	<!-- BaseSet Build -->
-	<build>
-  		<defaultGoal>install</defaultGoal>
-  		<directory>${basedir}/target</directory>
-  		<finalName>${artifactId}-${version}</finalName>
-  		<filters>
-  		</filters>
-		<plugins>
-			<plugin>
-    				<groupId>org.codehaus.mojo</groupId>
-    				<artifactId>cobertura-maven-plugin</artifactId>
-   				<version>2.7</version>
-    				<configuration>
-        			<formats>
-            				<format>html</format>
-            				<format>xml</format>
-        			</formats>
-       				 <check />
-    				</configuration>
-			</plugin>
-     			<plugin>
-        			<groupId>org.apache.maven.plugins</groupId>
-       				 <artifactId>maven-compiler-plugin</artifactId>
-        			<version>3.7.0</version>
-        			<configuration>
-         				<source>1.8</source>
-          				<target>1.8</target>
-        			</configuration>
-      			</plugin>
-		</plugins>
-	</build>
+	<!-- Project dependencies -->
+<dependencies>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.0</version>
+		<type>jar</type>
+		<scope>test</scope>
+		<optional>true</optional>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-csv</artifactId>
+	    <version>1.5</version>
+	</dependency>
+	
 
-	<!-- jUnit dependency -->
-	<dependencies>
-		<dependency>
-    		<groupId>junit</groupId>
-    		<artifactId>junit</artifactId>
-    		<version>4.12</version> <!-- Or whatever JUnit you're using. -->
-		</dependency>
-	</dependencies>
+<dependency>
+    <groupId>org.mockito</groupId>
+    <artifactId>mockito-core</artifactId>
+    <version>2.18.0</version>
+</dependency>
+
+</dependencies>
+
+<!-- Project build -->
+<build>
+	<defaultGoal>install</defaultGoal>
+	<directory>${basedir}/target</directory>
+	<finalName>${project.artifactId}-${project.version}</finalName>
+	<filters>
+
+	</filters>
+	<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+    <scriptSourceDirectory>${basedir}/src/main/scripts</scriptSourceDirectory>
+    <testSourceDirectory>${basedir}/src/test/java</testSourceDirectory>
+    <outputDirectory>${basedir}/target/classes</outputDirectory>
+    <testOutputDirectory>${basedir}/target/test-classes</testOutputDirectory>
+    <plugins>
+<plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>cobertura-maven-plugin</artifactId>
+    <version>2.7</version>
+    <configuration>
+        <formats>
+            <format>html</format>
+            <format>xml</format>
+        </formats>
+        <check />
+    </configuration>
+</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+</plugins>
+</build>
+
 </project>
-
