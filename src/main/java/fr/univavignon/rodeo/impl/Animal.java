@@ -4,30 +4,45 @@ import fr.univavignon.rodeo.api.IAnimal;
 
 public class Animal implements IAnimal
 {
-
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+	private String name;
+	private int xp;
+	private boolean isBoss;
+	private boolean isSecret;
+	private boolean isEndangered;
+	
+	
+	public Animal(String name, int xp, boolean isBoss, boolean isSecret, boolean isEndangered)
+	{
+		this.name = name;
+		this.xp = xp;
+		this.isBoss = isBoss;
+		this.isSecret = isSecret;
+		this.isEndangered = isEndangered;
+	}
+	
+	public String getName() 
+	{
+		return this.name;
 	}
 
-	public int getXP() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getXP() 
+	{
+		return this.xp;
 	}
 
-	public boolean isSecret() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isSecret() 
+	{
+		return this.isSecret();
 	}
 
-	public boolean isEndangered() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isEndangered() 
+	{
+		return this.isEndangered();
 	}
 
-	public boolean isBoss() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isBoss() 
+	{
+		return this.isBoss();
 	}
 
 }
