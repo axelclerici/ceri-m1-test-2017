@@ -1,4 +1,4 @@
-package fr.univavignon.rodeo.testapi;
+package fr.univavignon.rodeo;
 
 import static org.junit.Assert.assertEquals;
 
