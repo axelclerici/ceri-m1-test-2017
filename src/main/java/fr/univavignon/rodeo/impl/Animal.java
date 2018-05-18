@@ -11,7 +11,7 @@ public class Animal implements IAnimal
 	private boolean isEndangered;
 	
 	
-	public Animal(String name, int xp, boolean isBoss, boolean isSecret, boolean isEndangered)
+	public Animal(String name, int xp, boolean isBoss, boolean isEndangered, boolean isSecret)
 	{
 		this.name = name;
 		this.xp = xp;
