@@ -32,17 +32,17 @@ public class Animal implements IAnimal
 
 	public boolean isSecret() 
 	{
-		return this.isSecret();
+		return this.isSecret;
 	}
 
 	public boolean isEndangered() 
 	{
-		return this.isEndangered();
+		return this.isEndangered;
 	}
 
 	public boolean isBoss() 
 	{
-		return this.isBoss();
+		return this.isBoss;
 	}
 
 }
