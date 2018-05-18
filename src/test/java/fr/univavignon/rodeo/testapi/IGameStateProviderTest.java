@@ -22,6 +22,6 @@ public class IGameStateProviderTest
 	public void testGet()
 	{
 		IGameStateProvider gameStateProviderMock = Mockito.mock(IGameStateProvider.class);
-		assertTrue(gameStateProviderMock.get("test") instanceof IGameState);
+		assertEquals(gameStateProviderMock.get("test"), IGameStateTest.getTestGameState());
 	}
 }
