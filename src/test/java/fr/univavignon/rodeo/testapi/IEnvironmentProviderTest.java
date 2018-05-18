@@ -20,6 +20,7 @@ public class IEnvironmentProviderTest
 		IEnvironmentProvider environmentProviderMock = Mockito.mock(IEnvironmentProvider.class);
 		IEnvironment environment = IEnvironmentTest.getTestEnvironment();
 		List<String> environmentNames = buildTestEnvironmentNamesList();
+		
 		Mockito.when(environmentProviderMock.getAvailableEnvironments()).thenReturn(environmentNames);
 		Mockito.when(environmentProviderMock.getEnvironment(null)).thenThrow(new java.lang.IllegalArgumentException());
 		Mockito.when(environmentProviderMock.getEnvironment("thirdCase")).thenReturn(null);
@@ -39,7 +40,7 @@ public class IEnvironmentProviderTest
 	@Test
 	public void testGetAvailableEnvironments()
 	{
-		final IEnvironmentProvider environmentProviderMock = getTestEnvironmentProvider();
+		IEnvironmentProvider environmentProviderMock = getTestEnvironmentProvider();
 		assertEquals(2, environmentProviderMock.getAvailableEnvironments().size());
 		assertEquals("firstCase", environmentProviderMock.getAvailableEnvironments().get(0));
 	}
@@ -47,7 +48,7 @@ public class IEnvironmentProviderTest
 	@Test
 	public void testGetEnvironment()
 	{
-		final IEnvironmentProvider environmentProviderMock = getTestEnvironmentProvider();
+		IEnvironmentProvider environmentProviderMock = getTestEnvironmentProvider();
 		assertTrue(environmentProviderMock.getEnvironment("firstCase") instanceof IEnvironment);
 		assertEquals(null, environmentProviderMock.getEnvironment("thirdCase"));
 	}
@@ -55,7 +56,7 @@ public class IEnvironmentProviderTest
 	@Test(expected =  java.lang.IllegalArgumentException.class)
 	public void testGetEnvironmentEx()
 	{
-		final IEnvironmentProvider environmentProviderMock = getTestEnvironmentProvider();
+		IEnvironmentProvider environmentProviderMock = getTestEnvironmentProvider();
 		environmentProviderMock.getEnvironment(null);
 	}
 	

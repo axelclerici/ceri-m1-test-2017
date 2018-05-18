@@ -16,8 +16,9 @@ public class IEnvironmentTest
 	public static IEnvironment getTestEnvironment()
 	{
 		IEnvironment environmentMock = Mockito.mock(IEnvironment.class);
+		List<ISpecie> specieList = buildTestSpecieList();
 		Mockito.when(environmentMock.getAreas()).thenReturn(42);
-		Mockito.when(environmentMock.getSpecies()).thenReturn(buildTestSpecieList());
+		Mockito.when(environmentMock.getSpecies()).thenReturn(specieList);
 		return environmentMock;
 	}
 	
