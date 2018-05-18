@@ -1,5 +1,12 @@
 # ceri-m2-test
 
+## Informations
+
+### Auteur
+
+- Axel CLERICI
+- M1 ILSEN Classique
+
 ## Resources
 
 ### Cours
