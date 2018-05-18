@@ -1,4 +1,5 @@
 # ceri-m2-test
+https://circleci.com/gh/:owner/:repo.png?circle-token=:circle-token
 
 ## Informations
 
