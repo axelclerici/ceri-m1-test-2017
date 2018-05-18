@@ -18,10 +18,12 @@ public class IEnvironmentProviderTest
 	public static IEnvironmentProvider getTestEnvironmentProvider()
 	{
 		IEnvironmentProvider environmentProviderMock = Mockito.mock(IEnvironmentProvider.class);
-		Mockito.when(environmentProviderMock.getAvailableEnvironments()).thenReturn(buildTestEnvironmentNamesList());
+		IEnvironment environment = IEnvironmentTest.getTestEnvironment();
+		List<String> environmentNames = buildTestEnvironmentNamesList();
+		Mockito.when(environmentProviderMock.getAvailableEnvironments()).thenReturn(environmentNames);
 		Mockito.when(environmentProviderMock.getEnvironment(null)).thenThrow(new java.lang.IllegalArgumentException());
 		Mockito.when(environmentProviderMock.getEnvironment("thirdCase")).thenReturn(null);
-		Mockito.when(environmentProviderMock.getEnvironment("firstCase")).thenReturn(IEnvironmentTest.getTestEnvironment());
+		Mockito.when(environmentProviderMock.getEnvironment("firstCase")).thenReturn(environment);
 		
 		return environmentProviderMock;
 	}

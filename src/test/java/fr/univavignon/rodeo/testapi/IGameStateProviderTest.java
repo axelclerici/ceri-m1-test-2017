@@ -14,7 +14,9 @@ public class IGameStateProviderTest
 	public static IGameStateProvider getTestGameStateProvider()
 	{
 		IGameStateProvider gameStateProviderMock = Mockito.mock(IGameStateProvider.class);
-		Mockito.when(gameStateProviderMock.get("test")).thenReturn(IGameStateTest.getTestGameState());
+		IGameState gameState = IGameStateTest.getTestGameState();
+		
+		Mockito.when(gameStateProviderMock.get("test")).thenReturn(gameState);
 		return gameStateProviderMock;
 		
 	}

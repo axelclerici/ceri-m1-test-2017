@@ -16,8 +16,10 @@ public class ISpecieTest
 	public static ISpecie getTestSpecie()
 	{
 		ISpecie specieMock = Mockito.mock(ISpecie.class);
+		List<IAnimal> animalList = buildTestAnimalList();
+		
 		Mockito.when(specieMock.getArea()).thenReturn(42);
-		Mockito.when(specieMock.getAnimals()).thenReturn(buildTestAnimalList());
+		Mockito.when(specieMock.getAnimals()).thenReturn(animalList);
 		return specieMock;
 	}	
 	
