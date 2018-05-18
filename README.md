@@ -1,5 +1,5 @@
 # ceri-m2-test
-https://circleci.com/gh/:owner/:repo.png?circle-token=:circle-token
+[![CircleCI](https://circleci.com/gh/axelclerici/ceri-m1-test-2017.svg?style=svg)](https://circleci.com/gh/axelclerici/ceri-m1-test-2017) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4e3aa9255fa4181b65ff95626bef6c1)](https://www.codacy.com/app/axelclerici/ceri-m1-test-2017?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=axelclerici/ceri-m1-test-2017&amp;utm_campaign=Badge_Grade) [![codecov](https://codecov.io/gh/axelclerici/ceri-m1-test-2017/branch/master/graph/badge.svg)](https://codecov.io/gh/axelclerici/ceri-m1-test-2017)
 
 ## Informations
 
