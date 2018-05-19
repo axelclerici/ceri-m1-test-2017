@@ -3,6 +3,7 @@ package fr.univavignon.rodeo.impl;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -54,7 +55,7 @@ public class GameStateProvider implements IGameStateProvider
 			String readLine = "";
 			while ((readLine = b.readLine()) != null)
 			{
-				
+				//String gsName = readLine
 			}
 		} 
 		catch (FileNotFoundException e) {}
