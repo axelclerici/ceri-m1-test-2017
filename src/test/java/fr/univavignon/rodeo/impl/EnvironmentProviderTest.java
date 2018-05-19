@@ -37,4 +37,12 @@ public class EnvironmentProviderTest
 		EnvironmentProvider provider = new EnvironmentProvider();
 		provider.getEnvironment(null);
 	}
+	
+	@Test
+	public void testGetAnimal()
+	{
+		EnvironmentProvider provider = new EnvironmentProvider();
+		assertEquals("Hippo", provider.getAnimal("Hippo").getName());
+		assertEquals(0, provider.getAnimal("Hippo").getXP());
+	}
 }

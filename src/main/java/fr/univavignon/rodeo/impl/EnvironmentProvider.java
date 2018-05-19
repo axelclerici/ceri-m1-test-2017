@@ -75,6 +75,47 @@ public class EnvironmentProvider implements IEnvironmentProvider
 		
 		return animals;
 	}
+	
+	public IAnimal getAnimal(String name)
+	{
+		IAnimal result = null;
+		File animalsFolder = new File("animals");
+		for(File envFolder : animalsFolder.listFiles())
+		{
+			for(File specieFile : envFolder.listFiles())
+			{
+				BufferedReader b;
+				try 
+				{
+					b = new BufferedReader(new FileReader(specieFile));
+					String readLine = "";
+					while ((readLine = b.readLine()) != null)
+					{
+						String[] content = readLine.split(" ");
+						String animalName = content[0];
+						if(animalName.equals(name))
+						{
+							boolean isBoss = false;
+							boolean isEndangered = false;
+							boolean isSecret = false;
+							if(content[1].equals("Boss"))
+								isBoss = true;
+							else if(content[1].equals("Endangered"))
+								isEndangered = true;
+							else if(content[1].equals("Secret"))
+								isSecret = true;
+							int xp = Integer.parseInt(content[2]);
+							result = new Animal(animalName, xp, isBoss, isEndangered, isSecret);
+							
+						}
+					}
+				} 
+				catch (FileNotFoundException e) {}
+				catch (IOException e) {}
+			}
+		}
+		return animal;
+	}
 
 
 	public IEnvironment getEnvironment(String name) throws IllegalArgumentException 

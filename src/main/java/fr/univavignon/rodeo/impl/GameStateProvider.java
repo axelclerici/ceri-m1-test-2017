@@ -1,6 +1,8 @@
 package fr.univavignon.rodeo.impl;
 
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -46,11 +48,23 @@ public class GameStateProvider implements IGameStateProvider
 
 	public IGameState get(String name) throws IllegalArgumentException 
 	{
+		try 
+		{
+			BufferedReader b = new BufferedReader(new FileReader(name + ".txt"));
+			String readLine = "";
+			while ((readLine = b.readLine()) != null)
+			{
+				
+			}
+		} 
+		catch (FileNotFoundException e) {}
+		catch (IOException e) {}
 		return null;
 	}
-	
+
 	public static void main(String[] args)
 	{
+		/*
 		Map<Specie, Integer> map = new HashMap<Specie, Integer>();
 		List<Animal> caught = new ArrayList<Animal>();
 		caught.add(new Animal("JeanClaudeVanDamme", 600, true, false, false));
@@ -64,6 +78,7 @@ public class GameStateProvider implements IGameStateProvider
 		GameState gameState = new GameState("name", 50, env, 5, caught, map);
 		provider.save(gameState);
 		System.out.println("done");
+		*/
 	}
 
 }

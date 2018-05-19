@@ -1,0 +1,11 @@
+TestGameState
+99
+5
+Toundra
+
+Llama 100
+Goat 50
+Emu 0
+Wombat 87
+
+BossTrich
