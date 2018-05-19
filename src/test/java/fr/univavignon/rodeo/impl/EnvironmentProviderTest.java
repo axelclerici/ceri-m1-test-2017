@@ -19,7 +19,7 @@ public class EnvironmentProviderTest
 	public void testGetAnimals()
 	{
 		EnvironmentProvider provider = new EnvironmentProvider();
-		File gorillaFile = new File("animal" + File.separator + "Jungle" + File.separator + "1Gorilla.txt");
+		File gorillaFile = new File("animals" + File.separator + "Jungle" + File.separator + "1Gorilla.txt");
 		assertEquals(4, provider.getAnimals(gorillaFile).size());
 	}
 	
@@ -27,7 +27,7 @@ public class EnvironmentProviderTest
 	public void testGetSpecies()
 	{
 		EnvironmentProvider provider = new EnvironmentProvider();
-		assertEquals(0, provider.getSpecies("Jungle", 6).size());
+		assertEquals(0, provider.getSpecies("Jungle", 0).size());
 		assertEquals(3, provider.getSpecies("Jungle", 5).size());
 	}
 }
