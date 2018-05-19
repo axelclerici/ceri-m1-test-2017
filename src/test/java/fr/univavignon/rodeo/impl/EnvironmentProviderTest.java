@@ -44,5 +44,8 @@ public class EnvironmentProviderTest
 		EnvironmentProvider provider = new EnvironmentProvider();
 		assertEquals("Hippo", provider.getAnimal("Hippo").getName());
 		assertEquals(0, provider.getAnimal("Hippo").getXP());
+		assertEquals(false, provider.getAnimal("Hippo").isBoss());
+		assertEquals(false, provider.getAnimal("Hippo").isEndangered());
+		assertEquals(false, provider.getAnimal("Hippo").isSecret());
 	}
 }
