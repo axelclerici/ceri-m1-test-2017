@@ -1,0 +1,5 @@
+Common_Seal Base 0
+Seal_of_Fortune Endangered 30
+Navy_Seal Boss 30
+Banana_Seal Regular 4
+Leopard_Seal Regular 1

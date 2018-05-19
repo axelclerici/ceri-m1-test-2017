@@ -1,0 +1,8 @@
+Cape_Buffalo Base 0
+Forest_Buffalo Regular 1
+Water_Buffalo Regular 3
+Bison Regular 14
+Kerfuffle'o Regular 30
+Diabuffalo Secret 3
+Bufflerari Level9 14
+Buff_the_Magic_Dragon Endangered 30

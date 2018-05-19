@@ -32,4 +32,9 @@ public class Environment implements IEnvironment
 	{
 		return this.species;
 	}
+	
+	public void updateArea()
+	{
+		this.areas ++;
+	}
 }

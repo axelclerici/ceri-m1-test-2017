@@ -9,6 +9,7 @@ public class Animal implements IAnimal
 	private boolean isBoss;
 	private boolean isSecret;
 	private boolean isEndangered;
+	private boolean isCaught;
 	
 	
 	public Animal(String name, int xp, boolean isBoss, boolean isEndangered, boolean isSecret)

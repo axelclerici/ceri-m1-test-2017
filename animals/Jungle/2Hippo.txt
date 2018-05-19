@@ -1,0 +1,3 @@
+Hippo Base 0
+Pigmy_Hippo Regular 1
+Platypotamus Secret 15

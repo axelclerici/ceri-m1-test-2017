@@ -1,0 +1,4 @@
+Wombat Base 0
+Combat_Wombat  Regular 1
+Bombat Secret 3
+Wombatman Regular 12

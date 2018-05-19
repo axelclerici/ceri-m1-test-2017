@@ -1,0 +1,6 @@
+Penguin Base 0
+Emperor_Penguin Regular 1
+Plague_Doctor_Penguin Regular 4
+Penghis_Khan Regular 30
+Fairy_Penguin Secret 30
+Penddhinn Endangered 30

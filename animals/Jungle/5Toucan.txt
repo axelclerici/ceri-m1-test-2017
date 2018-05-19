@@ -1,0 +1,5 @@
+Toucan Base 0
+Hornbill Regular 1
+Bazookan Endangered 25
+Brewcan Regular 25
+Threecan Secret 6
