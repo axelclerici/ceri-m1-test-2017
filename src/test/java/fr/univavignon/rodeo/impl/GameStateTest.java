@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IEnvironment;
 
 public class GameStateTest 
@@ -37,5 +38,15 @@ public class GameStateTest
 	{
 		GameState gameState = new GameState("name", 0, null, 0, null, null);
 		gameState.catchAnimal(null);
+	}
+	
+	@Test(expected =  java.lang.IllegalStateException.class)
+	public void testCatchAnimal2()
+	{
+		EnvironmentProvider envProvider = new EnvironmentProvider();
+		IEnvironment env = envProvider.getEnvironment("Jungle");
+		GameState gameState = new GameState("name", 50, env, 5, null, null);
+		IAnimal animal = new Animal("Two-Nicorns", 0, false, false, false);
+		gameState.catchAnimal(animal);
 	}
 }
