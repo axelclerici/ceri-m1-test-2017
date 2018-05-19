@@ -31,7 +31,7 @@ public class SpecieTest
 	public void testGetAnimals()
 	{
 		Specie specieTest = new Specie("specie", 0, buildAnimalList());
-		assertEquals(5, specieTest.getAnimals().size());
+		assertEquals(3, specieTest.getAnimals().size());
 	}
 	
 	@Test
