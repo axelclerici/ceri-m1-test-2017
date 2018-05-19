@@ -37,7 +37,7 @@ public class GameStateProvider implements IGameStateProvider
 			}
 			writer.println("");
 			
-			for(Animal animal : gs.caughtAnimals)
+			for(IAnimal animal : gs.caughtAnimals)
 			{
 				writer.println(animal.getName());
 			}
