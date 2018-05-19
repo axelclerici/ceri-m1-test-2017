@@ -28,7 +28,7 @@ public class GameState implements IGameState
 	
 	public String getName() 
 	{
-		return this.name();
+		return this.name;
 	}
 
 	
