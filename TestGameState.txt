@@ -1,7 +1,7 @@
 TestGameState
 99
 5
-Toundra
+Tundra
 
 Llama 100
 Goat 50

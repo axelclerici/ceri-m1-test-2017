@@ -16,9 +16,9 @@ public class GameState implements IGameState
 	public int currentArea;
 	public IEnvironment currentEnvironment;
 	public List<Animal> caughtAnimals;
-	public Map<Specie, Integer> allSpecieLevels;
+	public Map<String, Integer> allSpecieLevels;
 	
-	public GameState(String name, int progression, IEnvironment environment, int area, List<Animal> caughtAnimals, Map<Specie, Integer> allSpecieLevels)
+	public GameState(String name, int progression, IEnvironment environment, int area, List<IAnimal> caughtAnimals, Map<String, Integer> allSpecieLevels)
 	{
 		this.name = name;
 		this.progression = progression;
