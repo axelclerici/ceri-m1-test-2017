@@ -13,10 +13,10 @@ public class GameState implements IGameState
 {
 	private String name;
 	private int progression;
-	private int currentArea;
-	private IEnvironment currentEnvironment;
-	private List<Animal> caughtAnimals;
-	private Map<Specie, Integer> allSpecieLevels;
+	public int currentArea;
+	public IEnvironment currentEnvironment;
+	public List<Animal> caughtAnimals;
+	public Map<Specie, Integer> allSpecieLevels;
 	
 	public GameState(String name, int progression, IEnvironment environment, int area, List<Animal> caughtAnimals, Map<Specie, Integer> allSpecieLevels)
 	{
@@ -54,7 +54,8 @@ public class GameState implements IGameState
 		
 	}
 
-	public SpecieLevel getSpecieLevel(ISpecie specie) throws IllegalArgumentException {
+	public SpecieLevel getSpecieLevel(ISpecie specie) throws IllegalArgumentException 
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}
