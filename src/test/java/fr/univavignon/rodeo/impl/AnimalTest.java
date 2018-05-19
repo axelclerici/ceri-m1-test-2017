@@ -49,4 +49,13 @@ public class AnimalTest
 		Animal animal = new Animal("test", 42, false, false, false);
 		assertEquals("test", animal.getName());
 	}
+	
+	@Test
+	public void testUpdateCaught()
+	{
+		Animal animal = new Animal("test", 42, false, false, false);
+		assertEquals(false, animal.isCaught);
+		animal.updateCaught();
+		assertEquals(true, animal.isCaught);
+	}
 }

@@ -9,7 +9,7 @@ public class Animal implements IAnimal
 	private boolean isBoss;
 	private boolean isSecret;
 	private boolean isEndangered;
-	private boolean isCaught;
+	public boolean isCaught;
 	
 	
 	public Animal(String name, int xp, boolean isBoss, boolean isEndangered, boolean isSecret)
@@ -19,6 +19,7 @@ public class Animal implements IAnimal
 		this.isBoss = isBoss;
 		this.isSecret = isSecret;
 		this.isEndangered = isEndangered;
+		this.isCaught = false;
 	}
 	
 	public String getName() 

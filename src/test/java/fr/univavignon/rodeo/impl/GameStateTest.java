@@ -28,7 +28,14 @@ public class GameStateTest
 	@Test
 	public void testGetProgression()
 	{
-		GameState gameState = new GameState("name", 42, null, 0, null, null);
+		GameState gameState = new GameState("Volcanorilla", 42, null, 0, null, null);
 		assertEquals(42, gameState.getProgression());
+	}
+	
+	@Test(expected =  java.lang.IllegalArgumentException.class)
+	public void testCatchAnimal1()
+	{
+		GameState gameState = new GameState("name", 0, null, 0, null, null);
+		gameState.catchAnimal(null);
 	}
 }
