@@ -35,6 +35,6 @@ public class GameStateProviderTest
 		assertEquals(5, gs.currentArea);
 		assertEquals("Tundra", gs.currentEnvironment.getName());
 		assertEquals(0, gs.allSpecieLevels.get("Emu"));
-		assertEquals("BossTrich", gs.caughtAnimals.get(0));
+		assertEquals("BossTrich", gs.caughtAnimals.get(0).getName());
 	}
 }
