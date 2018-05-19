@@ -21,8 +21,8 @@ public class GameStateTest
 		EnvironmentProvider envProvider = new EnvironmentProvider();
 		IEnvironment env = envProvider.getEnvironment("Jungle");
 		GameState gameState = new GameState("name", 50, env, 5, null, null);
-		assertEquals(true, gameState.catchIsPossible("Gorilla"));
-		assertEquals(false, gameState.catchIsPossible("Llama"));
+		assertEquals(true, gameState.catchIsPossible("Volcanorilla"));
+		assertEquals(false, gameState.catchIsPossible("Two-Nicorns"));
 	}
 	
 	@Test
