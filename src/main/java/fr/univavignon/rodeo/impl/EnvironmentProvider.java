@@ -114,7 +114,7 @@ public class EnvironmentProvider implements IEnvironmentProvider
 				catch (IOException e) {}
 			}
 		}
-		return animal;
+		return result;
 	}
 
 
