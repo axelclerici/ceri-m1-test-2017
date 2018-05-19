@@ -39,10 +39,8 @@ public class EnvironmentTest
 	public static List<ISpecie> buildTestSpecieList()
 	{
 		List<ISpecie> specieList = new ArrayList<ISpecie>();
-		List<IAnimal> animals = new ArrayList<IAnimal>();
-		animals.add(new Animal("animal", 0, false, false, false));
-		animals.add(new Animal("animal2", 0, false, false, false));
-		animals.add(new Animal("animal3", 0, false, false, false));
+		List<IAnimal> animals = SpecieTest.buildAnimalList();
+
 		specieList.add(new Specie("specie", 1, animals));
 		specieList.add(new Specie("specie", 1, animals));
 		specieList.add(new Specie("specie", 1, animals));

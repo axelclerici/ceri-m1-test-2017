@@ -19,19 +19,19 @@ public class Specie implements ISpecie
 	}
 	
 	
-	public String getName() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getName() 
+	{
+		return this.name;
 	}
 
-	public int getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getArea() 
+	{
+		return this.area;
 	}
 
-	public List<IAnimal> getAnimals() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<IAnimal> getAnimals() 
+	{
+		return this.animals;
 	}
 
 }
