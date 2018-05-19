@@ -20,6 +20,7 @@ public class ISpecieTest
 		
 		Mockito.when(specieMock.getArea()).thenReturn(42);
 		Mockito.when(specieMock.getAnimals()).thenReturn(animalList);
+		Mockito.when(specieMock.getName()).thenReturn("specie");
 		return specieMock;
 	}	
 	
@@ -35,6 +36,13 @@ public class ISpecieTest
 	{
 		ISpecie specieTest = getTestSpecie();
 		assertEquals(5, specieTest.getAnimals().size());
+	}
+	
+	@Test
+	public void testGetName()
+	{
+		ISpecie specieTest = getTestSpecie();
+		assertEquals("specie", specieTest.getName());
 	}
 	
 	private static List<IAnimal> buildTestAnimalList()

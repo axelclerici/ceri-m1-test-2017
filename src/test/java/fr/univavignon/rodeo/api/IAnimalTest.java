@@ -16,6 +16,7 @@ public class IAnimalTest
 		Mockito.when(animalMock.isBoss()).thenReturn(boss);
 		Mockito.when(animalMock.isEndangered()).thenReturn(endangered);
 		Mockito.when(animalMock.isSecret()).thenReturn(secret);
+		Mockito.when(animalMock.getName()).thenReturn("animal");
 		return animalMock;
 	}
 	
@@ -51,5 +52,12 @@ public class IAnimalTest
 		IAnimal regularAnimal = getTestAnimal(false, false, false);
 		assertEquals(true, secretAnimal.isSecret());
 		assertEquals(false, regularAnimal.isSecret());
+	}
+	
+	@Test
+	public void testGetName()
+	{
+		IAnimal animal = getTestAnimal(false, false, false);
+		assertEquals("animal", animal.getName());
 	}
 }
