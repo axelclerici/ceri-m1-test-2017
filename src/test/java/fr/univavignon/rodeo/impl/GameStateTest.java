@@ -49,4 +49,14 @@ public class GameStateTest
 		IAnimal animal = new Animal("Two-Nicorns", 0, false, false, false);
 		gameState.catchAnimal(animal);
 	}
+	
+	@Test
+	public void testCatchAnimal3()
+	{
+		EnvironmentProvider envProvider = new EnvironmentProvider();
+		IEnvironment env = envProvider.getEnvironment("Jungle");
+		GameState gameState = new GameState("name", 50, env, 5, null, null);
+		IAnimal animal = new Animal("Volcanorilla", 0, false, false, false);
+		gameState.catchAnimal(animal);
+	}
 }
