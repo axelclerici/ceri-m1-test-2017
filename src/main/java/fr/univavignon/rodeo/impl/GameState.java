@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import fr.univavignon.rodeo.api.IAnimal;
+import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.ISpecie;
 import fr.univavignon.rodeo.api.SpecieLevel;
@@ -13,17 +14,18 @@ public class GameState implements IGameState
 	private String name;
 	private int progression;
 	private int currentArea;
-	private Environment currentEnvironment;
+	private IEnvironment currentEnvironment;
 	private List<Animal> caughtAnimals;
-	private Map<Specie, SpecieLevel> allSpecieLevels;
+	private Map<Specie, Integer> allSpecieLevels;
 	
-	public GameState(String name, int progression, Environment environment, int area, List<Animal> caughtAnimals)
+	public GameState(String name, int progression, IEnvironment environment, int area, List<Animal> caughtAnimals, Map<Specie, Integer> allSpecieLevels)
 	{
 		this.name = name;
 		this.progression = progression;
 		this.currentArea = area;
 		this.currentEnvironment = environment;
 		this.caughtAnimals = caughtAnimals;
+		this.allSpecieLevels = allSpecieLevels;
 	}
 	
 	public String getName() 
@@ -42,7 +44,7 @@ public class GameState implements IGameState
 	{
 		if(animal != null)
 		{
-			if(catchIsPossible(animal))
+			if(catchIsPossible(animal.getName()))
 				((Animal)animal).updateCaught();
 			else
 				throw new IllegalStateException();
@@ -62,7 +64,7 @@ public class GameState implements IGameState
 		return this.progression;
 	}
 	
-	private boolean catchIsPossible(IAnimal animal)
+	public boolean catchIsPossible(String animalName)
 	{
 		boolean possible = false;
 		EnvironmentProvider envProvider = new EnvironmentProvider();
@@ -72,7 +74,7 @@ public class GameState implements IGameState
 		{
 			for(IAnimal a : specie.getAnimals())
 			{
-				if(a.getName().equals(animal.getName()))
+				if(a.getName().equals(animalName))
 					possible = true;
 			}
 		}
