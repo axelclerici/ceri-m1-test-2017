@@ -34,7 +34,7 @@ public class GameStateProviderTest
 		GameStateProvider provider = new GameStateProvider();
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		List<IAnimal> caught = new ArrayList<IAnimal>();
-		caught.add(new Animal("JeanClaudeVanDamme", 600, true, false, false));
+		caught.add(new Animal("Emu", 0, false, false, false));
 		map.put("OUI", 33);
 		map.put("OUI2", 66);
 		map.put("OUI3", 99);
@@ -49,7 +49,7 @@ public class GameStateProviderTest
 		assertEquals(5, gs.currentArea);
 		assertEquals("Jungle", gs.currentEnvironment.getName());
 		assertEquals(33, gs.allSpecieLevels.get("OUI"));
-		assertEquals("JeanClaudeVanDamme", gs.caughtAnimals.get(0).getName());
+		assertEquals("Emu", gs.caughtAnimals.get(0).getName());
 
 	}
 }
