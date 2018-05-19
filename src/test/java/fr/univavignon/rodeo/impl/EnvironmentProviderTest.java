@@ -30,4 +30,11 @@ public class EnvironmentProviderTest
 		assertEquals(0, provider.getSpecies("Jungle", 0).size());
 		assertEquals(3, provider.getSpecies("Jungle", 5).size());
 	}
+	
+	@Test(expected =  java.lang.IllegalArgumentException.class)
+	public void testGetEnvironment()
+	{
+		EnvironmentProvider provider = new EnvironmentProvider();
+		provider.getEnvironment(null);
+	}
 }
