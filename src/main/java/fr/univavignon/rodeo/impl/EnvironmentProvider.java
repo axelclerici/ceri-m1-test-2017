@@ -47,7 +47,7 @@ public class EnvironmentProvider implements IEnvironmentProvider
 		return specieList;
 	}
 
-	private List<IAnimal> getAnimals(File specieFile) 
+	public List<IAnimal> getAnimals(File specieFile) 
 	{
 		List<IAnimal> animals = new ArrayList<IAnimal>();
 		try 
