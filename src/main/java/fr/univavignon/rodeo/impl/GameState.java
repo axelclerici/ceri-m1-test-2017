@@ -31,17 +31,24 @@ public class GameState implements IGameState
 		return this.getName();
 	}
 
-	// Je n'ai pas comprit comment un animal était débloqué ...
-	// Je considère donc qu'un animal est débloqué quand il est capturé.
+	// Je considère que Unlocked et Caught sont la même chose.
 	public void exploreArea() throws IllegalStateException 
 	{
 		checkUnlockedAllAnimals(currentEnvironment, currentArea);
 		checkNewAreaToUnlock(currentEnvironment, currentArea);
-		updateArea();
 	}
 
-	public void catchAnimal(IAnimal animal) throws IllegalArgumentException, IllegalStateException {
-		// TODO Auto-generated method stub
+	public void catchAnimal(IAnimal animal) throws IllegalArgumentException, IllegalStateException 
+	{
+		if(animal != null)
+		{
+			if(catchIsPossible(animal))
+				((Animal)animal).updateCaught();
+			else
+				throw new IllegalStateException();
+		}
+		else
+			throw new IllegalArgumentException();
 		
 	}
 
@@ -50,9 +57,9 @@ public class GameState implements IGameState
 		return null;
 	}
 
-	public int getProgression() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getProgression() 
+	{
+		return this.progression;
 	}
 	
 	private boolean checkUnlockedAllAnimals(Environment environment, int currentArea)
@@ -65,9 +72,21 @@ public class GameState implements IGameState
 		return true;
 	}
 	
-	private void updateArea()
+	private boolean catchIsPossible(IAnimal animal)
 	{
-		
+		boolean possible = false;
+		EnvironmentProvider envProvider = new EnvironmentProvider();
+		String environmentName = currentEnvironment.getName();
+		List<ISpecie> species = envProvider.getSpecies(environmentName, currentArea);
+		for(ISpecie specie : species)
+		{
+			for(IAnimal a : specie.getAnimals())
+			{
+				if(a.getName().equals(animal.getName()))
+					possible = true;
+			}
+		}
+		return possible;
 	}
 
 }

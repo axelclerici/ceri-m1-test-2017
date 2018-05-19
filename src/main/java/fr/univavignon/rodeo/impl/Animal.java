@@ -45,5 +45,10 @@ public class Animal implements IAnimal
 	{
 		return this.isBoss;
 	}
+	
+	public void updateCaught()
+	{
+		this.isCaught = true;
+	}
 
 }
