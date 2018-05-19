@@ -31,11 +31,11 @@ public class GameState implements IGameState
 		return this.getName();
 	}
 
-	// Je considère que Unlocked et Caught sont la même chose.
+	
 	public void exploreArea() throws IllegalStateException 
-	{
+	{/*
 		checkUnlockedAllAnimals(currentEnvironment, currentArea);
-		checkNewAreaToUnlock(currentEnvironment, currentArea);
+		checkNewAreaToUnlock(currentEnvironment, currentArea);*/
 	}
 
 	public void catchAnimal(IAnimal animal) throws IllegalArgumentException, IllegalStateException 
@@ -60,16 +60,6 @@ public class GameState implements IGameState
 	public int getProgression() 
 	{
 		return this.progression;
-	}
-	
-	private boolean checkUnlockedAllAnimals(Environment environment, int currentArea)
-	{
-		return true;
-	}
-	
-	private boolean checkNewAreaToUnlock(Environment environment, int currentArea)
-	{
-		return true;
 	}
 	
 	private boolean catchIsPossible(IAnimal animal)
